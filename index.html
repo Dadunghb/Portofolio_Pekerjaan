@@ -1,222 +1,89 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portofolio Konstruksi - Dadung Hariyo Bismo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Konstruksi - Dadung HB</title>
   <style>
-    :root {
-      --bg-light: #f4f4f4;
-      --bg-dark: #1e1e1e;
-      --text-light: #fff;
-      --text-dark: #222;
-      --primary: #3498db;
-    }
-
     body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      transition: all 0.3s ease;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
-
-    body.dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-    }
-
-    header {
-      background-color: #2c3e50;
+    header, footer {
+      background-color: #1a237e;
       color: white;
-      padding: 2rem 1rem;
+      padding: 20px;
       text-align: center;
     }
-
     main {
-      max-width: 1000px;
+      padding: 20px;
+      max-width: 900px;
       margin: auto;
-      padding: 2rem 1rem;
     }
-
-    section {
-      margin-bottom: 3rem;
+    h1, h2 {
+      color: #1a237e;
     }
-
-    .project, .gallery-item {
-      background-color: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-
-    body.dark-mode .project, body.dark-mode .gallery-item {
-      background-color: #2b2b2b;
-    }
-
-    .project img, .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    .project-grid, .gallery-grid {
+    .projects {
       display: grid;
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    @media(min-width: 768px) {
-      .project-grid, .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .lang-switch, .download-cv {
-      display: inline-block;
-      margin: 1rem 0;
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: var(--primary);
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    iframe {
+    .project img {
       width: 100%;
-      height: 300px;
-      border: none;
       border-radius: 10px;
     }
-
-    a {
-      color: var(--primary);
+    .contact, .about {
+      margin-top: 40px;
+    }
+    .cv-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #3949ab;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .cv-link:hover {
+      background-color: #303f9f;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Dadung HB</h1>
+    <p>Portofolio Profesional di Bidang Konstruksi</p>
+  </header>
+  <main>
+    <section class="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya memiliki pengalaman lebih dari 5 tahun di bidang konstruksi, mulai dari pembangunan gedung bertingkat, renovasi bangunan, hingga pengawasan proyek.</p>
+      <a class="cv-link" href="CV-Kamu.pdf" target="_blank">Lihat CV</a>
+    </section>
 
-<header>
-  <h1 id="judul">Dadung Hariyo Bismo</h1>
-  <p id="subjudul">Portofolio Pekerjaan</p>
-  <button class="lang-switch" onclick="toggleLang()">Switch to English</button>
-</header>
-
-<main>
-  <section>
-    <h2 id="tentang-title">Tentang Saya</h2>
-    <p id="tentang-body">Saya adalah lulusan baru Teknik Sipil dengan keterampilan dalam pengembangan desain bangunan, manajemen proyek, estimasi biaya, dan pengujian material konstruksi. Berpengalaman sebagai Pengawas Lapangan, Drafter, dan Site Engineer. Mampu bekerja dalam tim dan sangat fokus pada kualitas dan ketepatan waktu pelaksanaan proyek.</p>
-    <a href="CV-Kamu.pdf" class="download-cv" download>📄 Download CV</a>
-  </section>
-
-  <section>
-    <h2 id="proyek-title">Proyek yang Pernah Dikerjakan</h2>
-    <div class="project-grid">
+    <section class="projects">
+      <h2>Proyek-Proyek</h2>
       <div class="project">
-        <h3>Pembangunan Pondok Pesantren Mualimin Muhammadiyah</h3>
-        <img src="https://via.placeholder.com/400x250" alt="Gedung XYZ">
-        <p>Peran: Pengawas Lapangan<br>Lokasi: Yogyakarta<br>Tahun: 2023</p>
+        <img src="img/proyek1.jpg" alt="Proyek 1" />
+        <p>Renovasi Gedung Kantor di Jakarta (2022)</p>
       </div>
       <div class="project">
-        <h3>Gedung Fakultas Keperawatan Poltekkes Denpasar</h3>
-        <img src="https://via.placeholder.com/400x250" alt="Green Residence">
-        <p>Peran: Drafter<br>Lokasi: Denpasar<br>Tahun: 2024</p>
+        <img src="img/proyek2.jpg" alt="Proyek 2" />
+        <p>Pembangunan Ruko 3 Lantai di Bekasi (2023)</p>
       </div>
-      <div class="project">
-        <h3>Gedung Direktorat Poltekkes Denpasar</h3>
-        <img src="https://via.placeholder.com/400x250" alt="Green Residence">
-        <p>Peran: Site Engineer<br>Lokasi: Denpasar<br>Tahun: 2024</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2 id="galeri-title">Galeri Proyek</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://via.placeholder.com/400x250" alt="Foto 1"></div>
-      <div class="gallery-item"><img src="https://via.placeholder.com/400x250" alt="Foto 2"></div>
-    </div>
-  </section>
-
-  <section>
-    <h2 id="sertifikat-title">Sertifikasi & Pelatihan</h2>
-    <ul id="sertifikat-list">
-      <li>SKK Juru Gambar / Draftman - Lembaga Pengembang Jasa Konstruksi (2020)</li>
-      <li>Quality Assurance (QA) Awareness – PT. Inter Strada Solutrindo (2024)</li>
-      <li>Quality Control (QC) Awareness – PT. Inter Strada Solutrindo (2024)</li>
-      <li>Pelatihan K3 Umum – BNSP (2025)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 id="lokasi-title">Lokasi Proyek</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.86883077766!2d106.68943063101116!3d-6.229386712588406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15777911a9f%3A0x301576d14feb9e0!2sJakarta!5e0!3m2!1sid!2sid!4v1684072472341!5m2!1sid!2sid" allowfullscreen></iframe>
-  </section>
-
-  <section>
-    <h2 id="kontak-title">Kontak</h2>
-    <p>Email: dadung.bismo@gmail.com</p>
-    <p>Telepon: 085158084166</p>
-    <p>LinkedIn: <a href="linkedin.com/in/dadung-hariyo-bismo" target="_blank">linkedin.com/in/kamu</a></p>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 [Dadung Hariyo Bismo] | Portofolio Pekerjaan
-</footer>
-
-<script>
-  // Dark Mode Otomatis
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Bahasa: ID ↔️ EN
-  let isIndo = true;
-  function toggleLang() {
-    isIndo = !isIndo;
-    if (isIndo) {
-      document.getElementById("judul").innerText = "[Nama Kamu]";
-      document.getElementById("subjudul").innerText = "Portofolio Profesional di Bidang Konstruksi";
-      document.getElementById("tentang-title").innerText = "Tentang Saya";
-      document.getElementById("tentang-body").innerText = "Saya adalah profesional konstruksi dengan pengalaman lebih dari 5 tahun sebagai pengawas lapangan dan drafter...";
-      document.getElementById("proyek-title").innerText = "Proyek yang Pernah Dikerjakan";
-      document.getElementById("galeri-title").innerText = "Galeri Proyek";
-      document.getElementById("sertifikat-title").innerText = "Sertifikasi & Pelatihan";
-      document.getElementById("sertifikat-list").innerHTML = `
-        <li>Sertifikat Ahli Muda Konstruksi (2021)</li>
-        <li>Pelatihan K3 Umum – BNSP (2022)</li>
-        <li>Workshop BIM Autodesk Revit (2023)</li>`;
-      document.getElementById("lokasi-title").innerText = "Lokasi Proyek";
-      document.getElementById("kontak-title").innerText = "Kontak";
-    } else {
-      document.getElementById("judul").innerText = "[Your Name]";
-      document.getElementById("subjudul").innerText = "Professional Construction Portfolio";
-      document.getElementById("tentang-title").innerText = "About Me";
-      document.getElementById("tentang-body").innerText = "I am a construction professional with over 5 years of experience as a site supervisor and drafter...";
-      document.getElementById("proyek-title").innerText = "Completed Projects";
-      document.getElementById("galeri-title").innerText = "Project Gallery";
-      document.getElementById("sertifikat-title").innerText = "Certifications & Training";
-      document.getElementById("sertifikat-list").innerHTML = `
-        <li>Certified Junior Construction Expert (2021)</li>
-        <li>General Safety Training – BNSP (2022)</li>
-        <li>BIM Workshop - Autodesk Revit (2023)</li>`;
-      document.getElementById("lokasi-title").innerText = "Project Locations";
-      document.getElementById("kontak-title").innerText = "Contact";
-    }
-  }
-</script>
-
+    <section class="contact">
+      <h2>Kontak</h2>
+      <p>Email: dadung@example.com</p>
+      <p>No. HP: 08xxxxxxxxxx</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Dadung HB. Seluruh Hak Cipta Dilindungi.
+  </footer>
 </body>
 </html>
